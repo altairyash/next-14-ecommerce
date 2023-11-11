@@ -53,7 +53,7 @@ export default function CheckoutPage() {
                     )}
                     <div className="p-5 ml-4 max-w-[500px]">
                         {productData?.length > 0 && productData.map(item => ((productsAdded[item._id] > 0) && (
-                            <ProductTileCheckout {...item} />
+                            <ProductTileCheckout {...item} key={item._id}/>
                         )))}
                     </div>
                 </div>
